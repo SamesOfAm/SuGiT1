@@ -1,0 +1,22 @@
+@import 'variables';
+
+body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  outline: none;
+  a {
+    outline: none;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+@import 'header';
+@import 'footer';
+@import 'main';
+@import 'menu';

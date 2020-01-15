@@ -1,0 +1,139 @@
+@import 'variables';
+
+#footer {
+  height: 600px;
+  background-image: radial-gradient($secondary-color, $primary-color);
+  color: white;
+  .inside {
+    position: relative;
+    height: 500px;
+    background: url("../layout/footer-bg.svg") no-repeat 40vw 300px/100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+    > div, nav {
+      width: 50%;
+    }
+  }
+  h3 {
+    margin-top: 17px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    font-weight: normal;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  h3,p {
+    padding-left: 30px;
+  }
+}
+
+.footer-info-wrapper {
+  position: relative;
+  width: 60%;
+  float: right;
+  margin-right: 50px;
+  p:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 20px;
+  }
+  p:nth-child(2):before {
+    background: url("../layout/locator.svg") no-repeat;
+  }
+}
+
+.footer-tel {
+  position: relative;
+  &:before {
+    background: url("../layout/phone.svg") no-repeat;
+    top: 3px;
+  }
+}
+
+.footer-mail {
+  position: relative;
+  &:before {
+    background: url("../layout/mail.svg") no-repeat;
+    top: 6px;
+  }
+}
+
+#footer .footer-tel a, #footer .footer-mail a {
+  transition: all 250ms;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+#footer ul {
+  width: 60%;
+  margin-left: 50px;
+  text-transform: uppercase;
+  li {
+    padding: 17px 0 10px;
+    &:not(:last-child) {
+      border-bottom: 1px solid;
+    }
+    a {
+      transition: all 250ms;
+      &:hover {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+#footer .mod_customnav li {
+  position: relative;
+  padding-left: 30px;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    content: '';
+    width: 20px;
+    height: 20px;
+  }
+  &:first-child:before,&:nth-child(2):before {
+    background: url("../layout/download.svg") no-repeat;
+  }
+  &:last-child:before {
+    background: url("../layout/document.svg") no-repeat;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #footer .inside {
+    display: block;
+  }
+
+  #footer .inside > div, #footer .inside > nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-info-wrapper {
+    width: 100%;
+    float: none;
+  }
+
+  #footer ul {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  #footer {
+    background-image: radial-gradient($primary-color, $tertiary-color);
+  }
+  #footer .inside {
+    background: url("../layout/footer-bg-mobil.svg") no-repeat 35vw 230px/100%;
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b74b9bc6-1315-42d2-847a-5011d6b73bbe" name="Server" url="http://home101953298.1and1-data.host">
+        <fileTransfer host="home101953298.1and1-data.host" port="22" rootFolder="/contao44" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

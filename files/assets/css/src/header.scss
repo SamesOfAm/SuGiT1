@@ -1,0 +1,42 @@
+@import 'variables';
+
+.logo {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.mobile_menu_trigger {
+  position: absolute;
+  top: 25px;
+  right: 4vw;
+  width: 50px;
+  cursor: pointer;
+  transition: all 250ms;
+  &:hover {
+    filter: drop-shadow(0 0 2px rgba(86,86,86,0.7))
+  }
+}
+
+#menu-mobile {
+  display: none;
+}
+
+@media screen and (max-width: $tablet) {
+  .logo {
+    max-width: 500px;
+  }
+
+  .mobile_menu_trigger {
+    top: 15px;
+  }
+
+}
+
+@media screen and (max-width: $smartphone) {
+
+  #main .inside > .mod_article:first-child > .ce_image:first-child img {
+    width: auto !important;
+    height: 300px;
+  }
+}
